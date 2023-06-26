@@ -21,12 +21,12 @@ class ContactRepository implements IContactRepository {
   }
 
  async create({
-  idProperty, idCompany, idClient, name, email, phone, whatsapp, type, origin, latitude, longitude,
+  idAuto, idCompany, idClient, name, email, phone, whatsapp, type, origin, latitude, longitude,
   }: ICreateContactDTO) {
     const contact: Contact = new Contact();
     const _id = uuidv4()
     Object.assign(contact, {
-      _id, id: _id,idProperty, idCompany, idClient, name, email, phone, whatsapp, type, origin, latitude, longitude,
+      _id, id: _id,idAuto, idCompany, idClient, name, email, phone, whatsapp, type, origin, latitude, longitude,
       created_at: new Date()
     });
 

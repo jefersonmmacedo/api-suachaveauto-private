@@ -21,12 +21,12 @@ class NegotiationsRepository implements INegotiationsRepository {
   }
 
 
-  async create({idCompany, idTeam, idClient, nameClient, cpfClient, idProperty, typeNegotiation, status, deadline, parcel, valueProperty, amountofCharges, valueTotal, typeOfInsurance}: INegotiationsDTO) {
+  async create({idCompany, idTeam, idClient, nameClient, cpfClient, idAuto, typeNegotiation, status, deadline, parcel, valueProperty, amountofCharges, valueTotal, typeOfInsurance}: INegotiationsDTO) {
     const negotiation: Negotiations = new Negotiations();
       const idMini = uuidv4()
       const id = idMini.substring(0,8)
       Object.assign(negotiation, {
-        id, _id: id, idCompany, idTeam, idClient, nameClient, cpfClient, idProperty, typeNegotiation, status, deadline, parcel, valueProperty, amountofCharges, valueTotal, typeOfInsurance, created_at: new Date(),
+        id, _id: id, idCompany, idTeam, idClient, nameClient, cpfClient, idAuto, typeNegotiation, status, deadline, parcel, valueProperty, amountofCharges, valueTotal, typeOfInsurance, created_at: new Date(),
       });
       this.negotiations.push(negotiation);
       
@@ -39,7 +39,7 @@ class NegotiationsRepository implements INegotiationsRepository {
 
   list(){ }
 
-  update({id, idCompany, idTeam, idClient, nameClient, cpfClient, idProperty, typeNegotiation, status, deadline, parcel, valueProperty, amountofCharges, valueTotal, typeOfInsurance}):void {}
+  update({id, idCompany, idTeam, idClient, nameClient, cpfClient, idAuto, typeNegotiation, status, deadline, parcel, valueProperty, amountofCharges, valueTotal, typeOfInsurance}):void {}
 
   async delete({id}) {
     await collections.negotiations.deleteOne(id).then((result) => {

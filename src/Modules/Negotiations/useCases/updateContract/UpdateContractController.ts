@@ -9,7 +9,7 @@ class UpdateContractController {
 
   async handle(req: Request, res: Response) {
     const {
-      idProperty, title, idCompany, idLocator, nameLocator, cpfCnpjLocator, idClient, nameClient, cpfCnpjClient,emailClient, phoneClient, whatsappClient, idGuarantor,
+      idAuto, title, idCompany, idLocator, nameLocator, cpfCnpjLocator, idClient, nameClient, cpfCnpjClient,emailClient, phoneClient, whatsappClient, idGuarantor,
       nameGuarantor, cpfCnpjGuarantor, type, subType, assurance, securityDeposit, typeNegotiation, newContract, status,
       startContract, endContract, parcels, maturityContract, valueContract, condominium, iptu, otherPrices, adjustment,
       readjustedRentDate, transfer, transferAmount, proportionalRent, daysProportional, firstProportionalInstallment, fireInsurance, valueFireInsurance,
@@ -19,7 +19,7 @@ class UpdateContractController {
 
 
     await collections.contracts.findOneAndUpdate(id, {$set:{ 
-      idProperty, title, idCompany, idLocator, nameLocator, cpfCnpjLocator, idClient, nameClient, cpfCnpjClient,emailClient, phoneClient, whatsappClient, idGuarantor,
+      idAuto, title, idCompany, idLocator, nameLocator, cpfCnpjLocator, idClient, nameClient, cpfCnpjClient,emailClient, phoneClient, whatsappClient, idGuarantor,
     nameGuarantor, cpfCnpjGuarantor, type, subType, assurance, securityDeposit, typeNegotiation, newContract, status,
     startContract, endContract, parcels, maturityContract, valueContract, condominium, iptu, otherPrices, adjustment,
     readjustedRentDate, transfer, transferAmount, proportionalRent, daysProportional, firstProportionalInstallment, fireInsurance, valueFireInsurance,

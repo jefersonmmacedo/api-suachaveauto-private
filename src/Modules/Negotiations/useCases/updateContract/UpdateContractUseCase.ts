@@ -2,7 +2,7 @@ import { IContractsRepository } from "../../repositories/IContractsRepository";
 
 interface IRequest {
   id: string;
-  idProperty: string;
+  idAuto: string;
   title: string;
   idCompany: string;
   idLocator: string;
@@ -52,14 +52,14 @@ class UpdateContractUseCase {
   }
   
   async execute({
-    id,idProperty, title, idCompany, idLocator, nameLocator, cpfCnpjLocator, idClient, nameClient, cpfCnpjClient,emailClient, phoneClient, whatsappClient, idGuarantor,
+    id,idAuto, title, idCompany, idLocator, nameLocator, cpfCnpjLocator, idClient, nameClient, cpfCnpjClient,emailClient, phoneClient, whatsappClient, idGuarantor,
     nameGuarantor, cpfCnpjGuarantor, type, subType, assurance, securityDeposit, typeNegotiation, newContract, status,
     startContract, endContract, parcels, maturityContract, valueContract, condominium, iptu, otherPrices, adjustment,
     readjustedRentDate, transfer, transferAmount, proportionalRent, daysProportional, firstProportionalInstallment, fireInsurance, valueFireInsurance,
     readjustmentIndex, fireInsuranceExpiration,
    }: IRequest): Promise<void> {
          await this.ContractRepository.update({
-          id,idProperty, title, idCompany, idLocator, nameLocator, cpfCnpjLocator, idClient, nameClient, cpfCnpjClient,emailClient, phoneClient, whatsappClient, idGuarantor,
+          id,idAuto, title, idCompany, idLocator, nameLocator, cpfCnpjLocator, idClient, nameClient, cpfCnpjClient,emailClient, phoneClient, whatsappClient, idGuarantor,
           nameGuarantor, cpfCnpjGuarantor, type, subType, assurance, securityDeposit, typeNegotiation, newContract, status,
           startContract, endContract, parcels, maturityContract, valueContract, condominium, iptu, otherPrices, adjustment,
           readjustedRentDate, transfer, transferAmount, proportionalRent, daysProportional, firstProportionalInstallment, fireInsurance, valueFireInsurance,

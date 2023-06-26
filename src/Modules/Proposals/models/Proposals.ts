@@ -1,7 +1,7 @@
 class Proposals {
   id: string;
   idCompany: string;
-  idProperty: string;
+  idAuto: string;
   title: string;
   type: string;
   subType: string;

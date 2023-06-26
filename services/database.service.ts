@@ -4,7 +4,7 @@ import * as dotenv from "dotenv";
 export const collections: { 
   company?:mongoDB.Collection,
   account?:mongoDB.Collection,
-  property?:mongoDB.Collection,
+  autos?:mongoDB.Collection,
   myPlain?:mongoDB.Collection,
   plains?:mongoDB.Collection,
   payments?:mongoDB.Collection,
@@ -24,7 +24,7 @@ export const collections: {
   access?:mongoDB.Collection,
   team?:mongoDB.Collection,
   recuperation?:mongoDB.Collection,
-  viewProperty?:mongoDB.Collection,
+  viewAuto?:mongoDB.Collection,
   messagesRooms?:mongoDB.Collection,
   rooms?:mongoDB.Collection,
   evaluation?:mongoDB.Collection,
@@ -41,16 +41,18 @@ export const collections: {
   waitingList?:mongoDB.Collection,
   webSiteClient?:mongoDB.Collection,
   locatorCompany?:mongoDB.Collection,
-  propertyCharges?:mongoDB.Collection,
+  autosCharges?:mongoDB.Collection,
   paymentCharges?:mongoDB.Collection,
   inspection?:mongoDB.Collection,
   features?:mongoDB.Collection,
+  documentAuto?:mongoDB.Collection,
   squad?:mongoDB.Collection,
   deletedCompany?:mongoDB.Collection,
   deletedClient?:mongoDB.Collection,
   proposals?:mongoDB.Collection,
   blog?:mongoDB.Collection,
   schedulingConfig?:mongoDB.Collection,
+  licensing?:mongoDB.Collection,
   rentAdjustment?:mongoDB.Collection,
  } = {}
 
@@ -71,9 +73,9 @@ export async function connectToDatabase() {
             collections.account = accountCollection;
             // console.log(`Successfully connected to database: ${db.databaseName} and collection: ${favoriteCollection.collectionName}`);
 
-                  // property
-      const propertyCollection: mongoDB.Collection = db.collection(process.env.PROPERTY_COLLECTION_NAME);
-      collections.property = propertyCollection;
+                  // autos
+      const autosCollection: mongoDB.Collection = db.collection(process.env.AUTOS_COLLECTION_NAME);
+      collections.autos = autosCollection;
       // console.log(`Successfully connected to database: ${db.databaseName} and collection: ${favoriteCollection.collectionName}`);
 
 
@@ -156,8 +158,8 @@ export async function connectToDatabase() {
       // console.log(`Successfully connected to database: ${db.databaseName} and collection: ${brokerCollection.collectionName}`);
 
       
-      const viewPropertyCollection: mongoDB.Collection = db.collection(process.env.VIEWPROPERTY_COLLECTION_NAME);
-      collections.viewProperty = viewPropertyCollection;
+      const viewAutoCollection: mongoDB.Collection = db.collection(process.env.VIEWAUTO_COLLECTION_NAME);
+      collections.viewAuto = viewAutoCollection;
       // console.log(`Successfully connected to database: ${db.databaseName} and collection: ${notificationCollection.collectionName}`);
 
       const recuperationCollection: mongoDB.Collection = db.collection(process.env.RECUPERATION_COLLECTION_NAME);
@@ -230,8 +232,8 @@ export async function connectToDatabase() {
           const locatorCompanyCollection: mongoDB.Collection = db.collection(process.env.LOCATORCOMPANY_COLLECTION_NAME);
           collections.locatorCompany = locatorCompanyCollection;
 
-          const propertyChargesCollection: mongoDB.Collection = db.collection(process.env.PROPERTYCHARGES_COLLECTION_NAME);
-          collections.propertyCharges = propertyChargesCollection;
+          const autosChargesCollection: mongoDB.Collection = db.collection(process.env.AUTOSCHARGES_COLLECTION_NAME);
+          collections.autosCharges = autosChargesCollection;
 
           const paymentChargesCollection: mongoDB.Collection = db.collection(process.env.PAYMENTCHARGES_COLLECTION_NAME);
           collections.paymentCharges = paymentChargesCollection;
@@ -242,8 +244,14 @@ export async function connectToDatabase() {
           const SquadCollection: mongoDB.Collection = db.collection(process.env.SQUAD_COLLECTION_NAME);
           collections.squad = SquadCollection;
 
+          const LicensingCollection: mongoDB.Collection = db.collection(process.env.LICENSING_COLLECTION_NAME);
+          collections.licensing = LicensingCollection;
+
           const FeaturesCollection: mongoDB.Collection = db.collection(process.env.FEATURES_COLLECTION_NAME);
           collections.features = FeaturesCollection;
+
+          const documentAutoCollection: mongoDB.Collection = db.collection(process.env.DOCUMENTAUTO_COLLECTION_NAME);
+          collections.documentAuto = documentAutoCollection;
 
           const deletedCompanyCollection: mongoDB.Collection = db.collection(process.env.DELETEDCOMPANY_COLLECTION_NAME);
           collections.deletedCompany = deletedCompanyCollection;

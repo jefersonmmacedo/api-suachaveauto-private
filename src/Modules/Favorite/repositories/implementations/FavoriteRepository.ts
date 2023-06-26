@@ -21,14 +21,14 @@ class FavoriteRepository implements IFavoriteRepository {
   }
 
   async create({
-    idCompany, idProperty, idClient
+    idCompany, idAuto, idClient
   }: ICreateFavoriteDTO) {
     const favorite: Favorite = new Favorite();
     const _id = uuidv4()
     Object.assign(favorite, {
       _id, id: _id,
       idCompany,
-     idProperty,
+     idAuto,
      idClient,
       created_at: new Date()
     });

@@ -21,7 +21,7 @@ class ContractsRepository implements IContractsRepository {
   }
 
 
-  async create({idProperty, title, idCompany, idLocator, nameLocator, cpfCnpjLocator, idClient, nameClient, cpfCnpjClient, emailClient, phoneClient, whatsappClient, idGuarantor,
+  async create({idAuto, title, idCompany, idLocator, nameLocator, cpfCnpjLocator, idClient, nameClient, cpfCnpjClient, emailClient, phoneClient, whatsappClient, idGuarantor,
     nameGuarantor, cpfCnpjGuarantor, type, subType, assurance, securityDeposit, typeNegotiation, newContract, status,
     startContract, endContract, parcels, maturityContract, valueContract, condominium, iptu, otherPrices, adjustment,
     readjustedRentDate, transfer, transferAmount, proportionalRent, daysProportional, firstProportionalInstallment, fireInsurance, valueFireInsurance,
@@ -30,7 +30,7 @@ class ContractsRepository implements IContractsRepository {
       const idMini = uuidv4()
       const id = idMini.substring(0,8)
       Object.assign(contracts, {
-        id, _id: id, idProperty, title, idCompany, idLocator, nameLocator, cpfCnpjLocator, idClient, nameClient, cpfCnpjClient, emailClient, phoneClient, whatsappClient, idGuarantor,
+        id, _id: id, idAuto, title, idCompany, idLocator, nameLocator, cpfCnpjLocator, idClient, nameClient, cpfCnpjClient, emailClient, phoneClient, whatsappClient, idGuarantor,
         nameGuarantor, cpfCnpjGuarantor, type, subType, assurance, securityDeposit, typeNegotiation, newContract, status,
         startContract, endContract, parcels, maturityContract, valueContract, condominium, iptu, otherPrices, adjustment,
         readjustedRentDate, transfer, transferAmount, proportionalRent, daysProportional, firstProportionalInstallment, fireInsurance, valueFireInsurance,
@@ -48,7 +48,7 @@ class ContractsRepository implements IContractsRepository {
 
   list(){ }
 
-  update({id, idProperty, title, idCompany, idLocator, nameLocator, cpfCnpjLocator, idClient, nameClient, cpfCnpjClient, emailClient, phoneClient, whatsappClient, idGuarantor,
+  update({id, idAuto, title, idCompany, idLocator, nameLocator, cpfCnpjLocator, idClient, nameClient, cpfCnpjClient, emailClient, phoneClient, whatsappClient, idGuarantor,
     nameGuarantor, cpfCnpjGuarantor, type, subType, assurance, securityDeposit, typeNegotiation, newContract, status,
     startContract, endContract, parcels, maturityContract, valueContract, condominium, otherPrices, adjustment,
     readjustedRentDate, transfer, transferAmount, proportionalRent, daysProportional, firstProportionalInstallment, fireInsurance, valueFireInsurance,

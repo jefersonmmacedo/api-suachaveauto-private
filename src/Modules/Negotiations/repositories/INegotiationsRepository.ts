@@ -7,7 +7,7 @@ interface INegotiationsDTO {
   idClient: string;
   nameClient: string;
   cpfClient: string;
-  idProperty: string;
+  idAuto: string;
   typeNegotiation: string;
   status: string;
   deadline: string;
@@ -23,11 +23,11 @@ interface INegotiationsDTO {
 
 interface INegotiationsRepository {
   create({
-    idCompany, idTeam, idClient, nameClient, cpfClient, idProperty, typeNegotiation, status,
+    idCompany, idTeam, idClient, nameClient, cpfClient, idAuto, typeNegotiation, status,
     deadline, parcel, valueProperty, amountofCharges, valueTotal, typeOfInsurance
   }: INegotiationsDTO): Promise<void>;
   list();
-  update({id, idCompany, idTeam, idClient, nameClient, cpfClient, idProperty, typeNegotiation, status, deadline, parcel,
+  update({id, idCompany, idTeam, idClient, nameClient, cpfClient, idAuto, typeNegotiation, status, deadline, parcel,
     valueProperty, amountofCharges, valueTotal, typeOfInsurance}: INegotiationsDTO): void;
   delete({id});
 }

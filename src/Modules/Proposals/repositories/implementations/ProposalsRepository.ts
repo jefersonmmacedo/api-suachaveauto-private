@@ -21,7 +21,7 @@ class ProposalsRepository implements IProposalsRepository {
   }
 
  async create({
-   typeProposal, idCompany, idProperty, title, type, subType, condominium, iptu, otherPrices, 
+   typeProposal, idCompany, idAuto, title, type, subType, condominium, iptu, otherPrices, 
    idClient, nameClient, cpfCnpjClient, email, phone, whatsapp,
   status, valueProperty, formOfpayment, expirationDate, contactReminder, 
   }: ICreateProposalsDTO) {
@@ -29,7 +29,7 @@ class ProposalsRepository implements IProposalsRepository {
     const _id = uuidv4()
     Object.assign(Proposals, {
       _id, id: _id,
-      typeProposal, idCompany, idProperty, title, type, subType, condominium, iptu, otherPrices, 
+      typeProposal, idCompany, idAuto, title, type, subType, condominium, iptu, otherPrices, 
       idClient, nameClient, cpfCnpjClient, email, phone, whatsapp,
 status, valueProperty, formOfpayment, expirationDate, contactReminder, 
       created_at: new Date()

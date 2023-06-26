@@ -2,7 +2,7 @@ import { Contact } from "../models/Contact";
 
 interface ICreateContactDTO {
   id: string;
-  idProperty: string;
+  idAuto: string;
   idCompany: string;
   idClient: string;
   name: string;
@@ -17,7 +17,7 @@ interface ICreateContactDTO {
   
 interface IContactRepository {
   create({
-   idProperty, idCompany, idClient, name, email, phone, whatsapp, type, origin, latitude, longitude,
+   idAuto, idCompany, idClient, name, email, phone, whatsapp, type, origin, latitude, longitude,
   }: ICreateContactDTO): void;
   list();
   delete({id});

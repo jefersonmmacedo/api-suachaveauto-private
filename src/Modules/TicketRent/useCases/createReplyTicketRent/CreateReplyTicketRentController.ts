@@ -8,11 +8,11 @@ class CreateReplyTicketRentController {
   }
   handle(req: Request, res: Response) {
     const { 
-      id, idTicket, IdClient, idCompany, idProperty,message, imagesProperty
+      id, idTicket, IdClient, idCompany, idAuto,message, imagesProperty
      } =
       req.body;
     this.createReplyTicketRentUseCase.execute({
-      id, idTicket, IdClient, idCompany, idProperty,message, imagesProperty
+      id, idTicket, IdClient, idCompany, idAuto,message, imagesProperty
     }).then((result) => {
       return res.status(201).json(result).send();
     }).catch(error => {

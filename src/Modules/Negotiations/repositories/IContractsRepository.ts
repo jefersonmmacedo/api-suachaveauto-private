@@ -2,7 +2,7 @@ import { Contracts } from "../models/Contracts";
 
 interface IContractsDTO {
   id: string;
-  idProperty: string;
+  idAuto: string;
   title: string;
   idCompany: string;
   idLocator: string;
@@ -50,7 +50,7 @@ fireInsuranceExpiration: string;
  
 interface IContractsRepository {
   create({ 
-    idProperty, title, idCompany, idLocator, nameLocator, cpfCnpjLocator, idClient, nameClient, cpfCnpjClient, emailClient, phoneClient, whatsappClient, idGuarantor,
+    idAuto, title, idCompany, idLocator, nameLocator, cpfCnpjLocator, idClient, nameClient, cpfCnpjClient, emailClient, phoneClient, whatsappClient, idGuarantor,
 nameGuarantor, cpfCnpjGuarantor, type, subType, assurance, securityDeposit, typeNegotiation, newContract, status,
 startContract, endContract, parcels, maturityContract, valueContract, condominium, iptu, otherPrices, adjustment,
 readjustedRentDate, transfer, transferAmount, proportionalRent, daysProportional, firstProportionalInstallment, fireInsurance, valueFireInsurance,
@@ -58,7 +58,7 @@ readjustmentIndex, fireInsuranceExpiration,
    }: IContractsDTO): Promise<void>;
   list();
   update({
-    id,idProperty, title, idCompany, idLocator, nameLocator, cpfCnpjLocator, idClient, nameClient, cpfCnpjClient,emailClient, phoneClient, whatsappClient, idGuarantor,
+    id,idAuto, title, idCompany, idLocator, nameLocator, cpfCnpjLocator, idClient, nameClient, cpfCnpjClient,emailClient, phoneClient, whatsappClient, idGuarantor,
     nameGuarantor, cpfCnpjGuarantor, type, subType, assurance, securityDeposit, typeNegotiation, newContract, status,
     startContract, endContract, parcels, maturityContract, valueContract, condominium, iptu, otherPrices, adjustment,
     readjustedRentDate, transfer, transferAmount, proportionalRent, daysProportional, firstProportionalInstallment, fireInsurance, valueFireInsurance,

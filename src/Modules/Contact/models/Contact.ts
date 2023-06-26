@@ -1,6 +1,6 @@
 class Contact {
   id: string;
-  idProperty: string;
+  idAuto: string;
   idCompany: string;
   idClient: string;
   name: string;

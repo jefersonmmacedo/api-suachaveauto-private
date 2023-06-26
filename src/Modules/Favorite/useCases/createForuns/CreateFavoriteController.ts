@@ -8,10 +8,10 @@ class CreateFavoriteController {
   }
 
   handle(req: Request, res: Response): Response {
-    const { id, idCompany, idProperty, idClient } = req.body;
+    const { id, idCompany, idAuto, idClient } = req.body;
 
     this.createFavoriteUseCase.execute({
-      id, idCompany, idProperty, idClient
+      id, idCompany, idAuto, idClient
     });
 
     return res.status(201).json();

@@ -7,7 +7,7 @@ interface IRequest {
   idCompany: string;
   idLocator: string;
   nameLocator: string;
-  idProperty: string;
+  idAuto: string;
   titleProperty: string;
   idTransaction: string;
   title: string;
@@ -22,9 +22,9 @@ class UpdateFinancerUseCase {
     " ";
   }
   
-  async execute({id, idCompany, idLocator, nameLocator, idProperty, titleProperty, idTransaction, title, description, type, value, document, }: IRequest): Promise<void> {
+  async execute({id, idCompany, idLocator, nameLocator, idAuto, titleProperty, idTransaction, title, description, type, value, document, }: IRequest): Promise<void> {
       await this.accountRepository.update({
-        id, idCompany, idLocator, nameLocator, idProperty, titleProperty, idTransaction, title, description, type, value, document,
+        id, idCompany, idLocator, nameLocator, idAuto, titleProperty, idTransaction, title, description, type, value, document,
       });
 
   }

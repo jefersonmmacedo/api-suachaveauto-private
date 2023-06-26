@@ -1,6 +1,6 @@
 class Negotiations {
   id: string;
-  idProperty: string;
+  idAuto: string;
   idCompany: string;
   idLocator: string;
   idClient: string;

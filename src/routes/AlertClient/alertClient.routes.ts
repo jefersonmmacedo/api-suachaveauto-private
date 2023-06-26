@@ -10,7 +10,7 @@ AlertClientRouter.post("/", (req, res) => {
   return createAlertClientController.handle(req, res);
 });
 
-AlertClientRouter.get("/property/:idProperty", (req, res) => {
+AlertClientRouter.get("/autos/:idAuto", (req, res) => {
   return listAlertClientController.handle(req, res);
 });
 

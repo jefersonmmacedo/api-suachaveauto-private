@@ -20,11 +20,11 @@ class TicketRentRepository implements ITicketRentRepository {
     return TicketRentRepository.INSTANCE;
   }
 
-  async create({ IdClient, idCompany, idProperty, status, priority, type, message, imagesProperty, }: ITicketRentDTO) {
+  async create({ IdClient, idCompany, idAuto, status, priority, type, message, imagesProperty, }: ITicketRentDTO) {
     const room: TicketRent = new TicketRent();
     const _id = uuidv4()
     Object.assign(room, {
-      _id, id: _id, IdClient, idCompany, idProperty, status, priority, type, message, imagesProperty,  created_at: new Date(),
+      _id, id: _id, IdClient, idCompany, idAuto, status, priority, type, message, imagesProperty,  created_at: new Date(),
     });
 
     this.ticketRent.push(room);

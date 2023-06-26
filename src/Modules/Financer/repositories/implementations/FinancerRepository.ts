@@ -21,13 +21,13 @@ class FinancerRepository implements IFinancerRepository {
   }
 
  async create({
-  idCompany, idLocator, nameLocator, idProperty, titleProperty, idTransaction, title, description, type, value, document
+  idCompany, idLocator, nameLocator, idAuto, titleProperty, idTransaction, title, description, type, value, document
   }: ICreateFinancerDTO) {
     const financer: Financer = new Financer();
     const _id = uuidv4()
     Object.assign(financer, {
       _id, id: _id,
-      idCompany, idLocator, nameLocator, idProperty, titleProperty, idTransaction, title, description, type, value, document,
+      idCompany, idLocator, nameLocator, idAuto, titleProperty, idTransaction, title, description, type, value, document,
       created_at: new Date()
     });
 
@@ -42,7 +42,7 @@ class FinancerRepository implements IFinancerRepository {
 
   list(){  }
 
-  async update({id, idCompany, idLocator, nameLocator, idProperty, titleProperty, idTransaction, title, description, type, value, document }){}
+  async update({id, idCompany, idLocator, nameLocator, idAuto, titleProperty, idTransaction, title, description, type, value, document }){}
 
   async delete({id}) {
     await collections.financer.deleteOne(id).then((result) => {

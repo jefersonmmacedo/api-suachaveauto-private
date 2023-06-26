@@ -5,7 +5,7 @@ interface IRequest {
   idCompany: string;
   idLocator: string;
   nameLocator: string;
-  idProperty: string;
+  idAuto: string;
   titleProperty: string;
   idTransaction: string;
   title: string;
@@ -20,9 +20,9 @@ class CreateFinancerUseCase {
     " ";
   }
 
-  execute({ id, idCompany, idLocator, nameLocator, idProperty, titleProperty,idTransaction, title, description, type, value, document }: IRequest): void {
+  execute({ id, idCompany, idLocator, nameLocator, idAuto, titleProperty,idTransaction, title, description, type, value, document }: IRequest): void {
     this.FinancerRepository.create({
-      id, idCompany, idLocator, nameLocator, idProperty, titleProperty,idTransaction, title, description, type, value, document
+      id, idCompany, idLocator, nameLocator, idAuto, titleProperty,idTransaction, title, description, type, value, document
     });
   }
 }

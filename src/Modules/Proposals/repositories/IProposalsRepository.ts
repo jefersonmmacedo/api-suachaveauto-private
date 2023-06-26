@@ -4,7 +4,7 @@ interface ICreateProposalsDTO {
   id: string;
   typeProposal: string;
   idCompany: string;
-  idProperty: string;
+  idAuto: string;
   title: string;
   type: string;
   subType: string;
@@ -27,12 +27,12 @@ interface ICreateProposalsDTO {
  
  interface IProposalsRepository {
   create({
-    typeProposal, idCompany, idProperty, title, type, subType, condominium, iptu, otherPrices, 
+    typeProposal, idCompany, idAuto, title, type, subType, condominium, iptu, otherPrices, 
     idClient, nameClient, cpfCnpjClient, email, phone, whatsapp,
     status, valueProperty, formOfpayment, expirationDate, contactReminder, 
   }: ICreateProposalsDTO): void;
   update({
-    id, typeProposal, idCompany, idProperty, title, type, subType, condominium, iptu, otherPrices,
+    id, typeProposal, idCompany, idAuto, title, type, subType, condominium, iptu, otherPrices,
     idClient, nameClient, cpfCnpjClient, email, phone, whatsapp,
     status, valueProperty, formOfpayment, expirationDate, contactReminder, 
   }: ICreateProposalsDTO): void;

@@ -3,7 +3,7 @@ import { Scheduling } from "../models/Scheduling";
 interface ISchedulingDTO {
   id: string;
   idClient: string;
-  idProperty: string;
+  idAuto: string;
   idCompany: string;
   idEvaluation: string;
   titleProperty: string;
@@ -32,11 +32,11 @@ interface ISchedulingDTO {
  
 interface ISchedulingRepository {
   create({
-    idClient, idProperty, idCompany, idEvaluation, titleProperty, imageProperty, nameClient, avatarClient, email, phone, whatsapp, type, status, meet,
+    idClient, idAuto, idCompany, idEvaluation, titleProperty, imageProperty, nameClient, avatarClient, email, phone, whatsapp, type, status, meet,
     day, month, year, shift, hour, ownACar,location, address,     similarProperties, amountOfPeople, dateCompleted
   }: ISchedulingDTO): Promise<void>;
   list();
-  update({id, idClient, idProperty, idCompany, idEvaluation, titleProperty, imageProperty, nameClient, avatarClient, email, phone, whatsapp, type, status, meet,
+  update({id, idClient, idAuto, idCompany, idEvaluation, titleProperty, imageProperty, nameClient, avatarClient, email, phone, whatsapp, type, status, meet,
     day, month, year, shift, hour, ownACar, location, address, similarProperties, amountOfPeople, dateCompleted}: ISchedulingDTO): void;
   delete({id});
 }

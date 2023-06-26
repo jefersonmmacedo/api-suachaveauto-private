@@ -9,7 +9,7 @@ interface IRequest {
   idClient: string;
   nameClient: string;
   cpfClient: string;
-  idProperty: string;
+  idAuto: string;
   typeNegotiation: string;
   status: string;
   deadline: string;
@@ -25,10 +25,10 @@ class CreateNegotiationsUseCase {
     " ";
   }
   
-  async execute({id, idCompany, idTeam, idClient, nameClient, cpfClient, idProperty, typeNegotiation, status, deadline, parcel, valueProperty, amountofCharges, valueTotal, typeOfInsurance}: IRequest): Promise<void> {
+  async execute({id, idCompany, idTeam, idClient, nameClient, cpfClient, idAuto, typeNegotiation, status, deadline, parcel, valueProperty, amountofCharges, valueTotal, typeOfInsurance}: IRequest): Promise<void> {
 
       await this.NegotiationsRepository.create({
-        id, idCompany, idTeam, idClient, nameClient, cpfClient, idProperty, typeNegotiation, status, deadline, parcel, valueProperty, amountofCharges, valueTotal, typeOfInsurance 
+        id, idCompany, idTeam, idClient, nameClient, cpfClient, idAuto, typeNegotiation, status, deadline, parcel, valueProperty, amountofCharges, valueTotal, typeOfInsurance 
       });
 
   }

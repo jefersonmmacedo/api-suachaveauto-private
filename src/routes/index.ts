@@ -17,11 +17,10 @@ import { MyPlainRoutes } from "./plains/myplain.routes";
 import { paymentRentRoutes } from "./plains/paymentRent.routes";
 import { paymentsRoutes } from "./plains/payments.routes";
 import { plainsRoutes } from "./plains/plains.routes";
-import { PropertyRoutes } from "./property/property.routes";
+import { AutosRoutes } from "./autos/autos.routes";
 import { groupsRecuperation } from "./recuperation/recuperation.routes";
 import { SchedulingRouter } from "./scheduling/scheduling.routes";
 import { SessionClientRouter } from "./sessions/sessions.routes";
-import { ViewPropertyRoutes } from "./viewProperty/viewProperty.routes";
 import { EvaluationRoutes } from "./evaluation/evaluation.routes";
 import { ticketRentRoutes } from "./ticketRent/ticketRent.routes";
 import { replyTicketRentRoutes } from "./ticketRent/replyTicketRent.routes";
@@ -46,17 +45,19 @@ import { ProposalsRouter } from "./Proposals/proposals.routes";
 import { BlogRouter } from "./Blog/blog.routes";
 import { DeletedsClientRouter } from "./DeletedsClient/deletedsClient.routes";
 import { DeletedsCompanyRouter } from "./DeletedsCompany/deletedsCompany.routes";
-import { PropertyChargesRoutes } from "./propertyCharges/propertyCharges.routes";
+import { fipeRoutes } from "./fipe/fipe";
+import { LicensingRouter } from "./Licensing/licensing.routes";
 // import { uploadFilesAwsRouter } from "./uploadFiles/uploadFilesAws";
 
 const router = Router();
 connectToDatabase()
   .then(() => {
     router.use("/mail", mailRoutes);
+    router.use("/fipe", fipeRoutes);
     router.use("/company", CompanyRouter)
     router.use("/client", AccountClientRouter);
     router.use("/session", SessionClientRouter);
-    router.use("/property", PropertyRoutes);
+    router.use("/autos", AutosRoutes);
     router.use("/plains", plainsRoutes);
     router.use("/myplain", MyPlainRoutes);
     router.use("/payments", paymentsRoutes);
@@ -76,7 +77,6 @@ connectToDatabase()
     router.use("/alertClient", AlertClientRouter);
     router.use("/searchClient", SearchClientRouter);
     router.use("/recuperation", groupsRecuperation);
-    router.use("/viewproperty", ViewPropertyRoutes);
     router.use("/messages", MessageRouter);
     router.use("/rooms", RoomRouter);
     router.use("/evaluation", EvaluationRoutes);
@@ -92,13 +92,13 @@ connectToDatabase()
     router.use("/waitingList", WaitingListRouter);
     router.use("/gerencianet", gerencianetRouter);
     router.use("/features", FeaturesRouter);
+    router.use("/licensings", LicensingRouter);
     router.use("/locator", LocatorCompanyRoutes);
     router.use("/webSiteClient", WebSiteClientRouter);
     router.use("/proposals", ProposalsRouter);
     router.use("/blog", BlogRouter);
     router.use("/deletedClient", DeletedsClientRouter);
     router.use("/deletedCompany", DeletedsCompanyRouter);
-    router.use("/propertyCharges", PropertyChargesRoutes);
     // router.use("/uploadfiles", uploadFilesRouter);
     // router.use("/uploadfilesaws", uploadFilesAwsRouter);
   }).catch((error: Error) => {

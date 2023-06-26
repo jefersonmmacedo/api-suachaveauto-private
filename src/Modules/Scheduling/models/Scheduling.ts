@@ -1,7 +1,7 @@
 class Scheduling {
   id: string;
   idClient: string;
-  idProperty: string;
+  idAuto: string;
   idCompany: string;
   idEvaluation: string;
   titleProperty: string;

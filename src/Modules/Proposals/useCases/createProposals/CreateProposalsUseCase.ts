@@ -4,7 +4,7 @@ interface IRequest {
   id: string;
   typeProposal: string;
   idCompany: string;
-  idProperty: string;
+  idAuto: string;
   title: string;
   type: string;
   subType: string;
@@ -29,11 +29,11 @@ class CreateProposalsUseCase {
     " ";
   }
 
-  execute({ id, typeProposal, idCompany, idProperty, title, type, subType, condominium, iptu, otherPrices,
+  execute({ id, typeProposal, idCompany, idAuto, title, type, subType, condominium, iptu, otherPrices,
     idClient, nameClient, cpfCnpjClient, email, phone, whatsapp,
     status, valueProperty, formOfpayment, expirationDate, contactReminder,  }: IRequest): void {
     this.ProposalsRepository.create({
-      id, typeProposal, idCompany, idProperty, title, type, subType, condominium, iptu, otherPrices, 
+      id, typeProposal, idCompany, idAuto, title, type, subType, condominium, iptu, otherPrices, 
       idClient, nameClient, cpfCnpjClient, email, phone, whatsapp,
 status, valueProperty, formOfpayment, expirationDate, contactReminder, 
     });

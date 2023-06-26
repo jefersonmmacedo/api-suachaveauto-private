@@ -5,7 +5,7 @@ interface ICreateFinancerDTO {
   idCompany: string;
   idLocator: string;
   nameLocator: string;
-  idProperty: string;
+  idAuto: string;
   titleProperty: string;
   idTransaction: string; //Venda - Aluguel
   title: string;
@@ -19,10 +19,10 @@ interface ICreateFinancerDTO {
 
 interface IFinancerRepository {
   create({
-   idCompany, idLocator, nameLocator, idProperty, titleProperty, idTransaction, title, description, type, value, document
+   idCompany, idLocator, nameLocator, idAuto, titleProperty, idTransaction, title, description, type, value, document
   }: ICreateFinancerDTO): void;
   update({
-   id, idCompany, idLocator, nameLocator, idProperty, titleProperty, idTransaction, title, description, type, value, document
+   id, idCompany, idLocator, nameLocator, idAuto, titleProperty, idTransaction, title, description, type, value, document
   }: ICreateFinancerDTO): void;
   list();
   delete({id});

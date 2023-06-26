@@ -3,7 +3,7 @@ class Financer {
   idCompany: string;
   idLocator: string;
   nameLocator: string;
-  idProperty: string;
+  idAuto: string;
   titleProperty: string;
   idTransaction: string;
   typeTransaction: string; //Contrato (Aluguel) ou Encargo

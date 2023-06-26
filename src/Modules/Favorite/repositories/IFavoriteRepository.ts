@@ -3,16 +3,16 @@ import { Favorite } from "../models/Favorite";
 interface ICreateFavoriteDTO {
   id: string;
   idCompany: string;
-  idProperty: string;
+  idAuto: string;
   idClient: string;
 }
 
 interface IFavoriteRepository {
   create({
-    idCompany, idProperty, idClient
+    idCompany, idAuto, idClient
   }: ICreateFavoriteDTO): void;
   update({
-   id, idCompany, idProperty, idClient
+   id, idCompany, idAuto, idClient
   }: ICreateFavoriteDTO): void;
   list();
   delete({id});

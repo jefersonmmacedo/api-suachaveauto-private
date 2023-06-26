@@ -9,10 +9,10 @@ class UpdateFinancerController {
   }
 
   async handle(req: Request, res: Response) {
-    const { idCompany, idLocator, nameLocator, idProperty, titleProperty, idTransaction, title, description, type, value, document,} = req.body;
+    const { idCompany, idLocator, nameLocator, idAuto, titleProperty, idTransaction, title, description, type, value, document,} = req.body;
     const id = req.params; 
 
-    await collections.account.findOneAndUpdate(id, {$set:{idCompany, idLocator, nameLocator, idProperty, titleProperty, idTransaction, title, description, type, value, document,}}, {upsert: true}).then((result) => {
+    await collections.account.findOneAndUpdate(id, {$set:{idCompany, idLocator, nameLocator, idAuto, titleProperty, idTransaction, title, description, type, value, document,}}, {upsert: true}).then((result) => {
       console.log("Status atualizada com sucesso")
       return res.status(201).json(result);
 

@@ -8,12 +8,12 @@ class CreateProposalsController {
   }
 
   handle(req: Request, res: Response): Response {
-    const { id, typeProposal, idCompany, idProperty, title, type, subType, condominium, iptu, otherPrices, 
+    const { id, typeProposal, idCompany, idAuto, title, type, subType, condominium, iptu, otherPrices, 
       idClient, nameClient, cpfCnpjClient, email, phone, whatsapp,
       status, valueProperty, formOfpayment, expirationDate, contactReminder,  } = req.body;
 
     this.createProposalsUseCase.execute({
-      id, typeProposal, idCompany, idProperty, title, type, subType, condominium, iptu, otherPrices, 
+      id, typeProposal, idCompany, idAuto, title, type, subType, condominium, iptu, otherPrices, 
       idClient, nameClient, cpfCnpjClient, email, phone, whatsapp,
 status, valueProperty, formOfpayment, expirationDate, contactReminder, 
     });

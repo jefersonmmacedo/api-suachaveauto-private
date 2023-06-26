@@ -20,11 +20,11 @@ class ReplyTicketRentRepository implements IReplyTicketRentRepository {
     return ReplyTicketRentRepository.INSTANCE;
   }
 
-  async create({ id, idTicket, IdClient, idCompany, idProperty, message, imagesProperty }: IReplyTicketRentDTO) {
+  async create({ id, idTicket, IdClient, idCompany, idAuto, message, imagesProperty }: IReplyTicketRentDTO) {
     const ticket: ReplyTicketRent = new ReplyTicketRent();
     const _id = uuidv4()
     Object.assign(ticket, {
-      _id, id: _id, idTicket, IdClient, idCompany, idProperty,message, imagesProperty, created_at: new Date(),
+      _id, id: _id, idTicket, IdClient, idCompany, idAuto,message, imagesProperty, created_at: new Date(),
     });
 
     this.replyTicketRent.push(ticket);

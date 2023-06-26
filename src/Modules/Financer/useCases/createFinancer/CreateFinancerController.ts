@@ -8,10 +8,10 @@ class CreateFinancerController {
   }
 
   handle(req: Request, res: Response): Response {
-    const { id, idCompany, idLocator, nameLocator, idProperty, titleProperty,idTransaction, title, description, type, value, document } = req.body;
+    const { id, idCompany, idLocator, nameLocator, idAuto, titleProperty,idTransaction, title, description, type, value, document } = req.body;
 
     this.createFinancerUseCase.execute({
-      id, idCompany, idLocator, nameLocator, idProperty, titleProperty,idTransaction, title, description, type, value, document
+      id, idCompany, idLocator, nameLocator, idAuto, titleProperty,idTransaction, title, description, type, value, document
     });
 
 

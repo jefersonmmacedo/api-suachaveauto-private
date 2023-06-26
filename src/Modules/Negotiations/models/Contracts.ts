@@ -1,6 +1,6 @@
 class Contracts {
   id: string;
-  idProperty: string;
+  idAuto: string;
   title: string;
   idCompany: string;
   idLocator: string;

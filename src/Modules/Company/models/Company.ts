@@ -7,7 +7,7 @@ class Company {
   typeDocument: string;
   socialReason: string;
   fantasyName: string;
-  creci: string;
+  register: string;
   email: string;
   phone: string;
   whatsapp: string;

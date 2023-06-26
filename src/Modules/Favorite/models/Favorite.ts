@@ -1,7 +1,7 @@
 class Favorite {
   id: string;
   idCompany: string;
-  idProperty: string;
+  idAuto: string;
   idClient: string;
   created_at: Date;
 }
