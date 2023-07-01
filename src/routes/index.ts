@@ -47,6 +47,7 @@ import { DeletedsClientRouter } from "./DeletedsClient/deletedsClient.routes";
 import { DeletedsCompanyRouter } from "./DeletedsCompany/deletedsCompany.routes";
 import { fipeRoutes } from "./fipe/fipe";
 import { LicensingRouter } from "./Licensing/licensing.routes";
+import { ViewAutoRoutes } from "./viewAuto/viewAuto.routes";
 // import { uploadFilesAwsRouter } from "./uploadFiles/uploadFilesAws";
 
 const router = Router();
@@ -99,6 +100,7 @@ connectToDatabase()
     router.use("/blog", BlogRouter);
     router.use("/deletedClient", DeletedsClientRouter);
     router.use("/deletedCompany", DeletedsCompanyRouter);
+    router.use("/viewAuto", ViewAutoRoutes);
     // router.use("/uploadfiles", uploadFilesRouter);
     // router.use("/uploadfilesaws", uploadFilesAwsRouter);
   }).catch((error: Error) => {

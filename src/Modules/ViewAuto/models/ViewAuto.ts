@@ -6,8 +6,8 @@ class ViewAuto {
   origin: string;
   latitude: string;
   longitude: string;
-  type: string;
-  subType: string;
+  brand: string;
+  model: string;
   created_at: Date;
 }
 

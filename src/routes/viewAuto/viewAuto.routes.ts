@@ -9,7 +9,7 @@ ViewAutoRoutes.post("/", (req, res) => {
   return createViewAutoController.handle(req, res);
 });
 
-ViewAutoRoutes.get("/Auto/:idAuto", (req, res) => {
+ViewAutoRoutes.get("/auto/:idAuto", (req, res) => {
   return listViewAutoController.handle(req, res);
 });
 

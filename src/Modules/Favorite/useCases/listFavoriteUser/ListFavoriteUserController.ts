@@ -9,9 +9,9 @@ class ListFavoriteUserController {
   }
 
   async handle(req: Request, res: Response) {
-    const {idProperty, idClient} = req.params;
+    const {idAuto, idClient} = req.params;
 
-   await collections.favorite.find({idProperty, idClient}).toArray(function(err, result){
+   await collections.favorite.find({idAuto, idClient}).toArray(function(err, result){
       if(err) {
         res.status(500).json(err)
       } else {

@@ -4,7 +4,7 @@ interface ITicketSupportDTO {
   id: string;
   IdClient: string;
   idCompany: string;
-  idProperty:string;
+  idAuto:string;
   status: string;
   priority: string;
   type: string;
@@ -15,7 +15,7 @@ interface ITicketSupportDTO {
 
 
 interface ITicketSupportRepository {
-  create({IdClient, idCompany, idProperty, status, priority, type, message, imagesProperty,  }: ITicketSupportDTO): Promise<void>;
+  create({IdClient, idCompany, idAuto, status, priority, type, message, imagesProperty,  }: ITicketSupportDTO): Promise<void>;
   list();
   delete({id});
 }

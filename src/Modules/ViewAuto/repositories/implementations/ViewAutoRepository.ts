@@ -21,13 +21,13 @@ class ViewAutoRepository implements IViewAutoRepository {
   }
 
  async create({
-   idAuto, idClient, idCompany, origin, latitude, longitude, type, subType,
+   idAuto, idClient, idCompany, origin, latitude, longitude, brand, model,
   }: ICreateViewAutoDTO) {
     const viewAuto: ViewAuto = new ViewAuto();
     const _id = uuidv4()
     Object.assign(viewAuto, {
       _id, id: _id,
-     idAuto, idClient, idCompany, origin, latitude, longitude, type, subType,
+     idAuto, idClient, idCompany, origin, latitude, longitude, brand, model,
       created_at: new Date()
     });
 

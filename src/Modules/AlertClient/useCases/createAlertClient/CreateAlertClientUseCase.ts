@@ -2,7 +2,7 @@ import { IAlertClientRepository } from "../../repositories/IAlertClientRepositor
 
 interface IRequest {
   id: string;
-  idProperty: string;
+  idAuto: string;
   
   email: string;
   name: string;
@@ -29,10 +29,10 @@ class CreateAlertClientUseCase {
     " ";
   }
 
-  execute({ id, idProperty, email, name, whatsapp,  district, city, uf, status, pets, furnished, type, subType, bedroom, suite, restroom, garage, }: IRequest): void {
+  execute({ id, idAuto, email, name, whatsapp,  district, city, uf, status, pets, furnished, type, subType, bedroom, suite, restroom, garage, }: IRequest): void {
 
     this.AlertClientRepository.create({
-      id, idProperty, email, name, whatsapp,  district, city, uf, status, pets, furnished, type, subType, bedroom, suite, restroom, garage,
+      id, idAuto, email, name, whatsapp,  district, city, uf, status, pets, furnished, type, subType, bedroom, suite, restroom, garage,
     });
   }
 }

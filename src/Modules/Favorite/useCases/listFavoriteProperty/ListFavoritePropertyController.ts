@@ -9,8 +9,8 @@ class ListFavoritePropertyController {
   }
 
   async handle(req: Request, res: Response) {
-    const {idProperty} = req.params;
-   await collections.favorite.find({idProperty}).toArray(function(err, result){
+    const {idAuto} = req.params;
+   await collections.favorite.find({idAuto}).toArray(function(err, result){
       if(err) {
         res.status(500).json(err)
       } else {

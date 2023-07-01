@@ -3,7 +3,7 @@ class TicketSupport {
   id: string;
   IdClient: string;
   idCompany: string;
-  idProperty:string;
+  idAuto:string;
   status: string;
   priority: string;
   type: string;

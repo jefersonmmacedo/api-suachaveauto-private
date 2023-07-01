@@ -20,11 +20,11 @@ class ReplyTicketSupportRepository implements IReplyTicketSupportRepository {
     return ReplyTicketSupportRepository.INSTANCE;
   }
 
-  async create({ id, idTicket, IdClient, idCompany, idProperty, message, imagesProperty }: IReplyTicketSupportDTO) {
+  async create({ id, idTicket, IdClient, idCompany, idAuto, message, imagesProperty }: IReplyTicketSupportDTO) {
     const ticket: ReplyTicketSupport = new ReplyTicketSupport();
     const _id = uuidv4()
     Object.assign(ticket, {
-      _id, id: _id, idTicket, IdClient, idCompany, idProperty,message, imagesProperty, created_at: new Date(),
+      _id, id: _id, idTicket, IdClient, idCompany, idAuto,message, imagesProperty, created_at: new Date(),
     });
 
     this.replyTicketSupport.push(ticket);

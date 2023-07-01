@@ -11,7 +11,7 @@ contactRoutes.post("/", (req, res) => {
 contactRoutes.get("/company/:idCompany", (req, res) => {
   return listContactUserController.handle(req, res);
 });
-contactRoutes.get("/property/:idProperty", (req, res) => {
+contactRoutes.get("/property/:idAuto", (req, res) => {
   return listContactPropertyController.handle(req, res);
 });
 

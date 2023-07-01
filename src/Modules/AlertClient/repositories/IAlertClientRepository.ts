@@ -2,7 +2,7 @@ import { AlertClient } from "../models/AlertClient";
 
 interface ICreateAlertClientDTO {
   id: string;
-  idProperty: string;
+  idAuto: string;
   email: string;
   name: string;
   whatsapp: string;
@@ -23,10 +23,10 @@ interface ICreateAlertClientDTO {
  
 interface IAlertClientRepository {
   create({
-   idProperty, email, name, whatsapp, district, city, uf, status, pets, furnished, type, subType, bedroom, suite, restroom, garage,
+   idAuto, email, name, whatsapp, district, city, uf, status, pets, furnished, type, subType, bedroom, suite, restroom, garage,
   }: ICreateAlertClientDTO): void;
   update({
-   id, idProperty, email, name, whatsapp, district, city, uf, status, pets, furnished, type, subType, bedroom, suite, restroom, garage,
+   id, idAuto, email, name, whatsapp, district, city, uf, status, pets, furnished, type, subType, bedroom, suite, restroom, garage,
   }: ICreateAlertClientDTO): void;
   list();
   delete({id});

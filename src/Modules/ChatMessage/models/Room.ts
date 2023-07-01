@@ -3,7 +3,7 @@ class Room {
   room: string;
   idCompany: string;
   idClient: string;
-  idProperty: string;
+  idAuto: string;
   imageProperty: string;
   created_at: Date;
 }

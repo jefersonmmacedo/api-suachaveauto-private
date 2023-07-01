@@ -10,7 +10,7 @@ const RoomRouter = Router();
 RoomRouter.post("/", (req, res) => {
   return createRoomController.handle(req, res);
 });
-RoomRouter.get("/:idProperty/:idCompany/:idClient", (req, res) => {
+RoomRouter.get("/:idAuto/:idCompany/:idClient", (req, res) => {
   return listRoomController.handle(req, res);
 });
 RoomRouter.get("/company/:idCompany", (req, res) => {

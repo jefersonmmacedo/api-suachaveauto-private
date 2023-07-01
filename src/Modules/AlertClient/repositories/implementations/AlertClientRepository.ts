@@ -21,13 +21,13 @@ class AlertClientRepository implements IAlertClientRepository {
   }
 
   async create({
-    idProperty, email, name, whatsapp,  city, uf, status, pets, furnished, type, subType, bedroom, suite, restroom, garage,
+    idAuto, email, name, whatsapp,  city, uf, status, pets, furnished, type, subType, bedroom, suite, restroom, garage,
   }: ICreateAlertClientDTO) {
     const alert: AlertClient = new AlertClient();
     const _id = uuidv4()
     Object.assign(alert, {
       _id, id: _id,
-      idProperty, email, name, whatsapp,  city, uf, status, pets, furnished, type, subType, bedroom, suite, restroom, garage,
+      idAuto, email, name, whatsapp,  city, uf, status, pets, furnished, type, subType, bedroom, suite, restroom, garage,
       created_at: new Date()
     });
 
@@ -42,7 +42,7 @@ class AlertClientRepository implements IAlertClientRepository {
 
   list(){  }
 
-  async update({ id, idProperty, email, name, whatsapp,  city, uf, status, pets, furnished, type, subType, bedroom, suite, restroom, garage,}){}
+  async update({ id, idAuto, email, name, whatsapp,  city, uf, status, pets, furnished, type, subType, bedroom, suite, restroom, garage,}){}
 
   async delete({id}) {
     await collections.alertClient.deleteOne(id).then((result) => {

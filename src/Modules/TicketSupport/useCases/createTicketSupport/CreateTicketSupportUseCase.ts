@@ -4,7 +4,7 @@ interface IRequest {
   id: string;
   IdClient: string;
   idCompany: string;
-  idProperty:string;
+  idAuto:string;
   status: string;
   priority: string;
   type: string;
@@ -18,11 +18,11 @@ class CreateTicketSupportUseCase {
   }
 
   async execute({
-    id,IdClient, idCompany, idProperty, status, priority, type, message, imagesProperty,
+    id,IdClient, idCompany, idAuto, status, priority, type, message, imagesProperty,
   }: IRequest): Promise<void>{
 
    await this.TicketSupportRepository.create({
-   id, IdClient, idCompany, idProperty, status, priority, type, message, imagesProperty,
+   id, IdClient, idCompany, idAuto, status, priority, type, message, imagesProperty,
     });
   }
 }

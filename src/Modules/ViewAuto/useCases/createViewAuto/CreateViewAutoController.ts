@@ -8,10 +8,10 @@ class CreateViewAutoController {
   }
 
   handle(req: Request, res: Response): Response {
-    const { id, idAuto, idClient, idCompany, origin, latitude, longitude, type, subType, } = req.body;
+    const { id, idAuto, idClient, idCompany, origin, latitude, longitude, brand, model, } = req.body;
 
     this.createViewAutoUseCase.execute({
-      id, idAuto, idClient, idCompany, origin, latitude, longitude, type, subType,
+      id, idAuto, idClient, idCompany, origin, latitude, longitude, brand, model,
     });
 
 

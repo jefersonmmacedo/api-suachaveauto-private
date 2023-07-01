@@ -20,7 +20,7 @@ favoriteRoutes.get("/", (req, res) => {
   return listFavoriteController.handle(req, res);
 });
 
-favoriteRoutes.get("/filter/:idProperty/:idClient", (req, res) => {
+favoriteRoutes.get("/filter/:idAuto/:idClient", (req, res) => {
   return listFavoriteUserController.handle(req, res);
 });
 favoriteRoutes.get("/company/:idCompany", (req, res) => {
@@ -29,7 +29,7 @@ favoriteRoutes.get("/company/:idCompany", (req, res) => {
 favoriteRoutes.get("/client/:idClient", (req, res) => {
   return listFavoriteClientController.handle(req, res);
 });
-favoriteRoutes.get("/property/:idProperty", (req, res) => {
+favoriteRoutes.get("/property/:idAuto", (req, res) => {
   return listFavoritePropertyController.handle(req, res);
 });
 

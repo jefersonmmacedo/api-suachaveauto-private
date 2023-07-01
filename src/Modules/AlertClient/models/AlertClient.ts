@@ -1,6 +1,6 @@
 class AlertClient {
   id: string;
-  idProperty: string;
+  idAuto: string;
   email: string;
   name: string;
   whatsapp: string;

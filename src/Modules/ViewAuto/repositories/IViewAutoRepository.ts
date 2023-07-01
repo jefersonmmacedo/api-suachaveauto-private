@@ -8,19 +8,20 @@ interface ICreateViewAutoDTO {
   origin: string;
   latitude: string;
   longitude: string;
-  type: string;
-  subType: string;
+  brand: string;
+  model: string;
 }
 
 interface IViewAutoRepository {
   create({
-   idAuto, idClient, idCompany, origin, latitude, longitude, type, subType,
+   idAuto, idClient, idCompany, origin, latitude, longitude, brand, model,
   }: ICreateViewAutoDTO): void;
   update({
-   id, idAuto, idClient, idCompany, origin, latitude, longitude, type, subType,
+   id, idAuto, idClient, idCompany, origin, latitude, longitude, brand, model,
   }: ICreateViewAutoDTO): void;
   list();
   delete({id});
 }
 
 export { IViewAutoRepository, ICreateViewAutoDTO };
+ 

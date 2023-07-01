@@ -8,11 +8,11 @@ class CreateTicketSupportController {
   }
   handle(req: Request, res: Response) {
     const { 
-      id, IdClient, idCompany, idProperty, status, priority, type, message, imagesProperty,
+      id, IdClient, idCompany, idAuto, status, priority, type, message, imagesProperty,
      } =
       req.body;
     this.createTicketSupportUseCase.execute({
-      id, IdClient, idCompany, idProperty, status, priority, type, message, imagesProperty,
+      id, IdClient, idCompany, idAuto, status, priority, type, message, imagesProperty,
     }).then((result) => {
       return res.status(201).json(result).send();
     }).catch(error => {

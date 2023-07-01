@@ -6,7 +6,7 @@ interface IRequest {
   idTicket: string;
   IdClient: string;
   idCompany: string;
-  idProperty:string;
+  idAuto:string;
   message: string;
   imagesProperty: object;
 }
@@ -17,11 +17,11 @@ class CreateReplyTicketSupportUseCase {
   }
 
   async execute({
-    id, idTicket, IdClient, idCompany, idProperty,message, imagesProperty
+    id, idTicket, IdClient, idCompany, idAuto,message, imagesProperty
   }: IRequest): Promise<void>{
 
    await this.ReplyTicketSupportRepository.create({
-   id,  idTicket, IdClient, idCompany, idProperty,message, imagesProperty
+   id,  idTicket, IdClient, idCompany, idAuto,message, imagesProperty
     });
   }
 }

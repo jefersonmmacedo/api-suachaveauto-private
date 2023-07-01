@@ -5,7 +5,7 @@ interface IReplyTicketSupportDTO {
   idTicket: string;
   IdClient: string;
   idCompany: string;
-  idProperty:string;
+  idAuto:string;
   message: string;
   imagesProperty: object;
 }
@@ -15,7 +15,7 @@ interface IReplyTicketSupportDTO {
 
 
 interface IReplyTicketSupportRepository {
-  create({id, idTicket, IdClient, idCompany, idProperty,message, imagesProperty }: IReplyTicketSupportDTO): Promise<void>;
+  create({id, idTicket, IdClient, idCompany, idAuto,message, imagesProperty }: IReplyTicketSupportDTO): Promise<void>;
   list();
   delete({id});
 }

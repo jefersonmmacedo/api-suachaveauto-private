@@ -8,8 +8,8 @@ interface IRequest {
   origin: string;
   latitude: string;
   longitude: string;
-  type: string;
-  subType: string;
+  brand: string;
+  model: string;
 }
 
  
@@ -18,9 +18,9 @@ class CreateViewAutoUseCase {
     " ";
   }
 
-  execute({ id, idAuto, idClient, idCompany, origin, latitude, longitude, type, subType, }: IRequest): void {
+  execute({ id, idAuto, idClient, idCompany, origin, latitude, longitude, brand, model, }: IRequest): void {
     this.ViewAutoRepository.create({
-      id, idAuto, idClient, idCompany, origin, latitude, longitude, type, subType,
+      id, idAuto, idClient, idCompany, origin, latitude, longitude, brand, model,
     });
   }
 }

@@ -20,11 +20,11 @@ class TicketSupportRepository implements ITicketSupportRepository {
     return TicketSupportRepository.INSTANCE;
   }
 
-  async create({ IdClient, idCompany, idProperty, status, priority, type, message, imagesProperty, }: ITicketSupportDTO) {
+  async create({ IdClient, idCompany, idAuto, status, priority, type, message, imagesProperty, }: ITicketSupportDTO) {
     const room: TicketSupport = new TicketSupport();
     const _id = uuidv4()
     Object.assign(room, {
-      _id, id: _id, IdClient, idCompany, idProperty, status, priority, type, message, imagesProperty,  created_at: new Date(),
+      _id, id: _id, IdClient, idCompany, idAuto, status, priority, type, message, imagesProperty,  created_at: new Date(),
     });
 
     this.ticketSupport.push(room);
