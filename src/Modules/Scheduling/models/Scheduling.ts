@@ -4,8 +4,8 @@ class Scheduling {
   idAuto: string;
   idCompany: string;
   idEvaluation: string;
-  titleProperty: string;
-  imageProperty: string;
+  dataCar: object;
+  imageAuto: string;
   nameClient: string;
   avatarClient: string;
   email: string;

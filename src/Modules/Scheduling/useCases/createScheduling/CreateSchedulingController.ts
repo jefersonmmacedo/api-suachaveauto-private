@@ -7,11 +7,11 @@ class CreateSchedulingController {
   }
 
   handle(req: Request, res: Response) {
-    const { id, idClient, idAuto, idCompany, idEvaluation, titleProperty, imageProperty, nameClient, avatarClient, email, phone, whatsapp, type, status, meet,
+    const { id, idClient, idAuto, idCompany, idEvaluation, dataCar, imageAuto, nameClient, avatarClient, email, phone, whatsapp, type, status, meet,
       day, month, year, shift, hour, ownACar, location, address, similarProperties, amountOfPeople, dateCompleted} = req.body;
 
     this.createSchedulingUseCase.execute({
-      id, idClient, idAuto, idCompany, idEvaluation, titleProperty, imageProperty, nameClient, avatarClient, email, phone, whatsapp, type, status, meet,
+      id, idClient, idAuto, idCompany, idEvaluation, dataCar, imageAuto, nameClient, avatarClient, email, phone, whatsapp, type, status, meet,
       day, month, year, shift, hour, ownACar, location, address, similarProperties, amountOfPeople, dateCompleted
     }).then((result) => {
       return res.status(201).json(result).send();

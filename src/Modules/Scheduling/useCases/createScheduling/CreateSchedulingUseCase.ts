@@ -8,8 +8,8 @@ interface IRequest {
   idAuto: string;
   idCompany: string;
   idEvaluation: string;
-  titleProperty: string;
-  imageProperty: string;
+  dataCar: object;
+  imageAuto: string;
   nameClient: string;
   avatarClient: string;
   email: string;
@@ -36,11 +36,11 @@ class CreateSchedulingUseCase {
     " ";
   }
   
-  async execute({id,idClient, idAuto, idCompany, idEvaluation, titleProperty, imageProperty, nameClient, avatarClient, email, phone, whatsapp, type, status, meet,
+  async execute({id,idClient, idAuto, idCompany, idEvaluation, dataCar, imageAuto, nameClient, avatarClient, email, phone, whatsapp, type, status, meet,
     day, month, year, shift, hour, ownACar,location, address, similarProperties, amountOfPeople, dateCompleted}: IRequest): Promise<void> {
 
       await this.SchedulingRepository.create({
-        id, idClient, idAuto, idCompany, idEvaluation, titleProperty, imageProperty, nameClient, avatarClient, email, phone, whatsapp, type, status, meet,
+        id, idClient, idAuto, idCompany, idEvaluation, dataCar, imageAuto, nameClient, avatarClient, email, phone, whatsapp, type, status, meet,
         day, month, year, shift, hour, ownACar,location, address, similarProperties, amountOfPeople, dateCompleted
       });
 
