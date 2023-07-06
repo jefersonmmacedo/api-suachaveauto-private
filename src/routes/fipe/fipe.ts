@@ -16,9 +16,12 @@ const fipeRoutes = Router();
 
   //  console.log(data);
    
-   const response = await axios.post("https://api.placafipe.xyz/getplacafipe", data)
-   console.log(response.data);
-  return res.json(response.data);
+await axios.post("https://api.placafipe.xyz/getplacafipe", data).then((result) => {
+    return res.status(201).json(result.data);
+  }).catch(error => {
+    return res.status(500);
+  })
+
 
 });
 
