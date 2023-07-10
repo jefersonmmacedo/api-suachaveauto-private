@@ -1812,15 +1812,7 @@
   resolved "https://registry.yarnpkg.com/@types/mime/-/mime-3.0.1.tgz#5f8f2bca0a5863cb69bc0b0acd88c96cb1d4ae10"
   integrity sha512-Y4XFY5VJAuw0FgAqPNd6NNoV44jbq9Bz2L7Rh/J6jLTiHBSBJa9fxqQIvkIld4GsoDOcCbvzOUAbLPsSKKg+uA==
 
-"@types/multer-s3@^2.7.12":
-  version "2.7.12"
-  resolved "https://registry.yarnpkg.com/@types/multer-s3/-/multer-s3-2.7.12.tgz#f10a298f880a7ade96ddd81b81d126ac2f4fda81"
-  integrity sha512-cJhn/TU+ko+u8dE4Pl9qSIwPh/MfzxvRdfoZv507wdKc3pFzVXc3NWqJelRzMkUGXX9jfecoYvcEJ2XCiD0LtQ==
-  dependencies:
-    "@types/multer" "*"
-    aws-sdk "^2.814.0"
-
-"@types/multer@*", "@types/multer@^1.4.7":
+"@types/multer@^1.4.7":
   version "1.4.7"
   resolved "https://registry.yarnpkg.com/@types/multer/-/multer-1.4.7.tgz#89cf03547c28c7bbcc726f029e2a76a7232cc79e"
   integrity sha512-/SNsDidUFCvqqcWDwxv2feww/yqhNeTRL5CVoL3jU4Goc4kKEL10T7Eye65ZqPNi4HRx8sAEX59pV1aEH7drNA==
@@ -2118,22 +2110,6 @@ aws-sdk@^2.1359.0:
   version "2.1359.0"
   resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.1359.0.tgz#2cde4dce72a6681a9ac5b3c751545e13e5fec850"
   integrity sha512-uGNIU4czx8P0YITV8uhuLFhmyYvLWsFYINlHJX77/fea4VuTwcCGktYy2OEnrErp3FK9NHQvwXBxZCbY0lcxBg==
-  dependencies:
-    buffer "4.9.2"
-    events "1.1.1"
-    ieee754 "1.1.13"
-    jmespath "0.16.0"
-    querystring "0.2.0"
-    sax "1.2.1"
-    url "0.10.3"
-    util "^0.12.4"
-    uuid "8.0.0"
-    xml2js "0.5.0"
-
-aws-sdk@^2.814.0:
-  version "2.1363.0"
-  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.1363.0.tgz#30c3b7fe999ee2ba1103a533ea27e1b0f5708e1f"
-  integrity sha512-M2MZZXehgi/EMQv5GlzRkn3TlhoOYHg2cYdSAAqhjv67WaEG50MjaQy5vRvfN1i8XvB24aJFJ5pCrx69TaCaIg==
   dependencies:
     buffer "4.9.2"
     events "1.1.1"

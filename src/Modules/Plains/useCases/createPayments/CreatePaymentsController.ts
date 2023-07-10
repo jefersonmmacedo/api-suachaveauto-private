@@ -32,12 +32,16 @@ class CreatePaymentsController {
        console.log("Type")
        console.log(findClient.typeDocument)
 
-       const Day = new Date().getDate();
+       const Day = new Date().getDate() +5;
        const Month = new Date().getMonth() + 1;
        const Year = new Date().getFullYear();
 
        const MonthFormat = Month < 10 ? "0"+Month.toString():Month.toString()
-       console.log(`${Year.toString()}-${MonthFormat.toString()}-${Day.toString()}`)
+       const DayFormat = Day < 10 ? "0"+Day.toString():Day.toString()
+       console.log("Data")
+       console.log(`${Year.toString()}-${MonthFormat.toString()}-${DayFormat.toString()}`)
+
+
 
 
        let customer = null;

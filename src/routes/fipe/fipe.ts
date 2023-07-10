@@ -1,7 +1,7 @@
 import { Router } from "express";
 import nodemailer from 'nodemailer';
 import axios from 'axios';
-import apiFipe from "../../Service/apiFipe";
+
 
 
 const fipeRoutes = Router();
