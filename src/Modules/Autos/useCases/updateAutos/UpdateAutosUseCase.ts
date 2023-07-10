@@ -50,22 +50,21 @@ interface IRequest {
   gnv: string;
 }
 
-class CreateAutosUseCase {
-  constructor(private AutosRepository: IAutosRepository) {
+class UpdateAutosUseCase {
+  constructor(private autosRepository: IAutosRepository) {
     " ";
   }
   
-  async execute({
-    id, idCompany, avatarCompany, nameCompany, characteristcs, informations, description, type,
-     plate, chassi, brand, model, version, segment, subsegment, doors, color, year, yearModel,
+  async execute({id, idCompany, avatarCompany, nameCompany, characteristcs, informations, description, type,
+    plate, chassi, brand, model, version, segment, subsegment, doors, color, year, yearModel,
     mileage, march, engineCapacity, direction, fuel, endOfBoard, value, valueFipe, status,
     state, financing, city, uf, cityCompany, ufCompany, bodywork,
-    horses, video, platformVideo, images, featuredImage, emphasis, licensingInfos, availability, eletricCar, gnv 
-  }: IRequest): Promise<void> {
+    horses, video, platformVideo, images, featuredImage, emphasis, licensingInfos, availability, eletricCar, gnv  }: IRequest): Promise<void> {
 
-      await this.AutosRepository.create({
-        id, idCompany, avatarCompany, nameCompany, characteristcs, informations, description, type,
-         plate, chassi, brand, model, version, segment, subsegment, doors, color, year, yearModel,
+
+      await this.autosRepository.update({
+        id,idCompany, avatarCompany, nameCompany, characteristcs, informations, description, type,
+        plate, chassi, brand, model, version, segment, subsegment, doors, color, year, yearModel,
         mileage, march, engineCapacity, direction, fuel, endOfBoard, value, valueFipe, status,
         state, financing, city, uf, cityCompany, ufCompany, bodywork,
         horses, video, platformVideo, images, featuredImage, emphasis, licensingInfos, availability, eletricCar, gnv 
@@ -74,5 +73,4 @@ class CreateAutosUseCase {
   }
 }
 
-export { CreateAutosUseCase };
-
+export { UpdateAutosUseCase };

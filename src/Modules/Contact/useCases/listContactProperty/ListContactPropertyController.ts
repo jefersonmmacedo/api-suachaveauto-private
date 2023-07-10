@@ -9,8 +9,8 @@ class ListContactPropertyController {
   }
 
   async handle(req: Request, res: Response) {
-    const idProperty = req.params;
-   await collections.contact.find(idProperty).sort( { created_at: -1 } ).toArray(function(err, result){
+    const idAuto = req.params;
+   await collections.contact.find(idAuto).sort( { created_at: -1 } ).toArray(function(err, result){
       if(err) {
         res.status(500).json(err)
       } else {

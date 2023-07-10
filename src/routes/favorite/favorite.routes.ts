@@ -29,7 +29,7 @@ favoriteRoutes.get("/company/:idCompany", (req, res) => {
 favoriteRoutes.get("/client/:idClient", (req, res) => {
   return listFavoriteClientController.handle(req, res);
 });
-favoriteRoutes.get("/property/:idAuto", (req, res) => {
+favoriteRoutes.get("/auto/:idAuto", (req, res) => {
   return listFavoritePropertyController.handle(req, res);
 });
 

@@ -43,6 +43,7 @@ class Autos {
   licensingInfos: string;
   availability: string;
   eletricCar: string;
+  gnv: string;
   created_at: Date;
 }
 

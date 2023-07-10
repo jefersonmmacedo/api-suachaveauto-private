@@ -9,8 +9,8 @@ class ListAlertClientController {
   }
 
   async handle(req: Request, res: Response) {
-    const idProperty = req.params
-   await collections.alertClient.find(idProperty).toArray(function(err, result){
+    const idAuto = req.params
+   await collections.alertClient.find(idAuto).toArray(function(err, result){
       if(err) {
         res.status(500).json(err)
       } else {
