@@ -12,12 +12,12 @@ class CreateAutosController {
        plate, chassi, brand, model, version, segment, subsegment, doors, color, year, yearModel,
       mileage, march, engineCapacity, direction, fuel, endOfBoard, value, valueFipe, status,
       state, financing, city, uf, cityCompany, ufCompany, horses, video, platformVideo, images,
-      featuredImage, emphasis, licensingInfos, availability, bodywork,eletricCar, gnv,
+      featuredImage, emphasis, licensingInfos, availability, bodywork,eletricCar, gnv, phone,
      } = req.body;
 
      console.log( {id, idCompany, avatarCompany, nameCompany, characteristcs, informations, description, type,
       plate, chassi, brand, model, version, segment, subsegment, doors, color, year, yearModel,
-     mileage, march, engineCapacity, direction, fuel, endOfBoard, value, valueFipe, status, bodywork,eletricCar, gnv,
+     mileage, march, engineCapacity, direction, fuel, endOfBoard, value, valueFipe, status, bodywork,eletricCar, gnv, phone,
      state, financing, city, uf, cityCompany, ufCompany, horses, video, platformVideo, images,
      featuredImage, emphasis, licensingInfos, availability})
 
@@ -26,7 +26,7 @@ class CreateAutosController {
        plate, chassi, brand, model, version, segment, subsegment, doors, color, year, yearModel,
       mileage, march, engineCapacity, direction, fuel, endOfBoard, value, valueFipe, status,
       state, financing, city, uf, cityCompany, ufCompany, horses, video, platformVideo, images,
-      featuredImage, emphasis, licensingInfos, availability, bodywork,eletricCar, gnv,
+      featuredImage, emphasis, licensingInfos, availability, bodywork,eletricCar, gnv, phone,
     }).then((result) => {
       console.log(result);
       return res.status(201).json({result: result}).send(result);

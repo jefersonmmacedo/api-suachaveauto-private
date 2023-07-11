@@ -8,12 +8,12 @@ class UpdateCompanyController {
   }
 
   async handle(req: Request, res: Response) {
-    const {type, status, nameSlug, socialReason, fantasyName, creci, email, phone, whatsapp, responsibleName,
+    const {type, status, nameSlug, socialReason, fantasyName, creci, email, phone, whatsapp, textWhatsapp, whatsapp2, textWhatsapp2, whatsapp3, textWhatsapp3, whatsapp4, textWhatsapp4,  responsibleName,
       emailResponsible, whatsappResponsible, logo, cep, road, number, district, city, uf,complement, reference, viewAddress, website, facebook, instagram, linkedin, youtube,} = req.body;
     const id = req.params; 
 
 
-    await collections.company.findOneAndUpdate(id, {$set:{type, status, nameSlug, socialReason, fantasyName, creci, email, phone, whatsapp, responsibleName,
+    await collections.company.findOneAndUpdate(id, {$set:{type, status, nameSlug, socialReason, fantasyName, creci, email, phone, whatsapp, textWhatsapp, whatsapp2, textWhatsapp2, whatsapp3, textWhatsapp3, whatsapp4, textWhatsapp4,  responsibleName,
       emailResponsible, whatsappResponsible, logo, cep, road, number, district, city, uf,complement, reference, viewAddress, website, facebook, instagram, linkedin, youtube,}}, {upsert: true}).then((result) => {
       return res.status(201).json(result);
     }).catch(error => {

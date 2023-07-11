@@ -15,6 +15,13 @@ interface IRequest {
   email: string;
   phone: string;
   whatsapp: string;
+  textWhatsapp: string;
+  whatsapp2: string;
+  textWhatsapp2: string;
+  whatsapp3: string;
+  textWhatsapp3: string;
+  whatsapp4: string;
+  textWhatsapp4: string;
   responsibleName: string;
   emailResponsible: string;
   whatsappResponsible: string;
@@ -44,13 +51,13 @@ class UpdatePasswordUseCase {
     " ";
   }
   
-  async execute({id, type, verified, status, typeDocument, cpf_Cnpj, socialReason, fantasyName, creci, email, phone, whatsapp,
+  async execute({id, type, verified, status, typeDocument, cpf_Cnpj, socialReason, fantasyName, creci, email, phone, whatsapp, textWhatsapp, whatsapp2, textWhatsapp2, whatsapp3, textWhatsapp3, whatsapp4, textWhatsapp4, 
     password, responsibleName, emailResponsible, whatsappResponsible, logo, cep, road, number, district,
     city, uf,complement, reference, viewAddress, website, facebook, instagram, linkedin, youtube, nameSlug, aceptTerms, idComercialTeam, }: IRequest): Promise<void> {
     const passwordHash = await hash(await password, 8);
 
       await this.CompanyRepository.update({
-        id, type, verified, status, typeDocument, cpf_Cnpj, socialReason, fantasyName, creci, email, phone, whatsapp,
+        id, type, verified, status, typeDocument, cpf_Cnpj, socialReason, fantasyName, creci, email, phone, whatsapp, textWhatsapp, whatsapp2, textWhatsapp2, whatsapp3, textWhatsapp3, whatsapp4, textWhatsapp4, 
         password: passwordHash, responsibleName, emailResponsible, whatsappResponsible, logo, cep, road, number,
         district, city, uf,complement, reference, viewAddress, website, facebook, instagram, linkedin, youtube, nameSlug, aceptTerms, idComercialTeam, 
       });

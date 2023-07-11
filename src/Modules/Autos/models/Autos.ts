@@ -44,6 +44,7 @@ class Autos {
   availability: string;
   eletricCar: string;
   gnv: string;
+  phone: string;
   created_at: Date;
 }
 

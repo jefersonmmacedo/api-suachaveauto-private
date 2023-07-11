@@ -27,7 +27,7 @@ class AutosRepository implements IAutosRepository {
     plate, chassi, brand, model, version, segment, subsegment, doors, color, year, yearModel,
     mileage, march, engineCapacity, direction, fuel, endOfBoard, value, valueFipe, status,
     state, financing, city, uf, cityCompany, ufCompany, bodywork,
-    horses, video, platformVideo, images, featuredImage, emphasis, licensingInfos, availability,eletricCar, gnv,
+    horses, video, platformVideo, images, featuredImage, emphasis, licensingInfos, availability,eletricCar, gnv, phone,
   }: IAutosDTO) {
     const AutoNew: Autos = new Autos();
       Object.assign(AutoNew, {
@@ -35,7 +35,7 @@ class AutosRepository implements IAutosRepository {
         plate, chassi, brand, model, version, segment, subsegment, doors, color, year, yearModel,
         mileage, march, engineCapacity, direction, fuel, endOfBoard, value, valueFipe, status,
         state, financing, city, uf, cityCompany, ufCompany, bodywork,
-        horses, video, platformVideo, images, featuredImage, emphasis, licensingInfos, availability,eletricCar, gnv, 
+        horses, video, platformVideo, images, featuredImage, emphasis, licensingInfos, availability,eletricCar, gnv, phone, 
         created_at: new Date(),
       });
       this.autos.push(AutoNew);
@@ -53,7 +53,7 @@ class AutosRepository implements IAutosRepository {
      plate, chassi, brand, model, version, segment, subsegment, doors, color, year, yearModel,
     mileage, march, engineCapacity, direction, fuel, endOfBoard, value, valueFipe, status, bodywork,
     state, financing, city, uf, cityCompany, ufCompany, horses, video, platformVideo, images,
-    featuredImage, emphasis, licensingInfos, availability, eletricCar, gnv, }):void {}
+    featuredImage, emphasis, licensingInfos, availability, eletricCar, gnv, phone, }):void {}
 
   async delete({id}) {
     await collections.autos.deleteOne(id).then((result) => {

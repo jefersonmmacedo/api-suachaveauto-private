@@ -17,6 +17,13 @@ interface IResponse {
           email: string;
           phone: string;
           whatsapp: string;
+          textWhatsapp: string;
+          whatsapp2: string;
+          textWhatsapp2: string;
+          whatsapp3: string;
+          textWhatsapp3: string;
+          whatsapp4: string;
+          textWhatsapp4: string;
           password: string;
           responsibleName: string;
           emailResponsible: string;
@@ -88,6 +95,13 @@ class AuthenticateCompanyUseCase {
           email: user.email,
           phone: user.phone,
           whatsapp: user.whatsapp,
+          textWhatsapp: user.textWhatsapp,
+          whatsapp2: user.whatsapp2,
+          textWhatsapp2: user.textWhatsapp2,
+          whatsapp3: user.whatsapp3,
+          textWhatsapp3: user.textWhatsapp3,
+          whatsapp4: user.whatsapp4,
+          textWhatsapp4: user.textWhatsapp4,
           password: user.password,
           responsibleName: user.responsibleName,
           emailResponsible: user.emailResponsible,
@@ -129,6 +143,13 @@ class AuthenticateCompanyUseCase {
         email: user.email,
         phone: user.phone,
         whatsapp: user.whatsapp,
+        textWhatsapp: user.textWhatsapp,
+        whatsapp2: user.whatsapp2,
+        textWhatsapp2: user.textWhatsapp2,
+        whatsapp3: user.whatsapp3,
+        textWhatsapp3: user.textWhatsapp3,
+        whatsapp4: user.whatsapp4,
+        textWhatsapp4: user.textWhatsapp4,
         password: user.password,
         responsibleName: user.responsibleName,
         emailResponsible: user.emailResponsible,
@@ -174,6 +195,13 @@ class AuthenticateCompanyUseCase {
         email: user.email,
         phone: user.phone,
         whatsapp: user.whatsapp,
+        textWhatsapp: user.textWhatsapp,
+        whatsapp2: user.whatsapp2,
+        textWhatsapp2: user.textWhatsapp2,
+        whatsapp3: user.whatsapp3,
+        textWhatsapp3: user.textWhatsapp3,
+        whatsapp4: user.whatsapp4,
+        textWhatsapp4: user.textWhatsapp4,
         password: user.password,
         responsibleName: user.responsibleName,
         emailResponsible: user.emailResponsible,

@@ -13,14 +13,14 @@ class UpdateAutosController {
       plate, chassi, brand, model, version, segment, subsegment, doors, color, year, yearModel,
       mileage, march, engineCapacity, direction, fuel, endOfBoard, value, valueFipe, status,
       state, financing, city, uf, cityCompany, ufCompany, bodywork,
-      horses, video, platformVideo, images, featuredImage, emphasis, licensingInfos, availability, eletricCar, gnv } = req.body;
+      horses, video, platformVideo, images, featuredImage, emphasis, licensingInfos, availability, eletricCar, gnv, phone } = req.body;
     const id = req.params; 
 
     await collections.autos.findOneAndUpdate(id, {$set:{idCompany, avatarCompany, nameCompany, characteristcs, informations, description, type,
       plate, chassi, brand, model, version, segment, subsegment, doors, color, year, yearModel,
       mileage, march, engineCapacity, direction, fuel, endOfBoard, value, valueFipe, status,
       state, financing, city, uf, cityCompany, ufCompany, bodywork,
-      horses, video, platformVideo, images, featuredImage, emphasis, licensingInfos, availability, eletricCar, gnv }}, {upsert: true}).then((result) => {
+      horses, video, platformVideo, images, featuredImage, emphasis, licensingInfos, availability, eletricCar, gnv, phone }}, {upsert: true}).then((result) => {
       console.log("Status atualizada com sucesso")
       return res.status(201).json(result);
 

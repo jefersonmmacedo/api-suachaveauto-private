@@ -7,12 +7,12 @@ class CreateCompanyController {
   }
 
   handle(req: Request, res: Response) {
-    const { id,type, verified, status, typeDocument, cpf_Cnpj,nameSlug, socialReason, fantasyName, creci, email, phone, whatsapp, password, responsibleName,
+    const { id,type, verified, status, typeDocument, cpf_Cnpj,nameSlug, socialReason, fantasyName, creci, email, phone, whatsapp, textWhatsapp, whatsapp2, textWhatsapp2, whatsapp3, textWhatsapp3, whatsapp4, textWhatsapp4,  password, responsibleName,
     emailResponsible, whatsappResponsible, logo, cep, road, number, district, city, uf,complement, reference, viewAddress, website, facebook,
     instagram, linkedin, youtube, aceptTerms, idComercialTeam, } = req.body;
 
     this.createCompanyUseCase.execute({
-      id,type, verified, status, typeDocument, cpf_Cnpj,nameSlug, socialReason, fantasyName, creci, email, phone, whatsapp, password, responsibleName,
+      id,type, verified, status, typeDocument, cpf_Cnpj,nameSlug, socialReason, fantasyName, creci, email, phone, whatsapp, textWhatsapp, whatsapp2, textWhatsapp2, whatsapp3, textWhatsapp3, whatsapp4, textWhatsapp4,  password, responsibleName,
     emailResponsible, whatsappResponsible, logo, cep, road, number, district, city, uf,complement, reference, viewAddress, website, facebook,
     instagram, linkedin, youtube, aceptTerms, idComercialTeam,
     }).then((result) => {

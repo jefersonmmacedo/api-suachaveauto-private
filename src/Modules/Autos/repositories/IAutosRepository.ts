@@ -46,6 +46,7 @@ interface IAutosDTO {
   bodywork: string;
   eletricCar: string;
   gnv: string;
+  phone: string;
 }
 
   
@@ -55,7 +56,7 @@ interface IAutosRepository {
     plate, chassi, brand, model, version, segment, subsegment, doors, color, year, yearModel,
     mileage, march, engineCapacity, direction, fuel, endOfBoard, value, valueFipe, status,
     state, financing, city, uf, cityCompany, ufCompany, bodywork,
-    horses, video, platformVideo, images, featuredImage, emphasis, licensingInfos, availability, eletricCar, gnv 
+    horses, video, platformVideo, images, featuredImage, emphasis, licensingInfos, availability, eletricCar, gnv, phone 
   }: IAutosDTO): Promise<void>;
   list();
   update({
@@ -63,7 +64,7 @@ interface IAutosRepository {
     plate, chassi, brand, model, version, segment, subsegment, doors, color, year, yearModel,
     mileage, march, engineCapacity, direction, fuel, endOfBoard, value, valueFipe, status,
     state, financing, city, uf, cityCompany, ufCompany, bodywork,
-    horses, video, platformVideo, images, featuredImage, emphasis, licensingInfos, availability, eletricCar, gnv 
+    horses, video, platformVideo, images, featuredImage, emphasis, licensingInfos, availability, eletricCar, gnv, phone 
   }: IAutosDTO): void;
   delete({id});
 }

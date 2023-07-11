@@ -48,6 +48,7 @@ interface IRequest {
   bodywork: string;
   eletricCar: string;
   gnv: string;
+  phone: string;
 }
 
 class UpdateAutosUseCase {
@@ -59,7 +60,7 @@ class UpdateAutosUseCase {
     plate, chassi, brand, model, version, segment, subsegment, doors, color, year, yearModel,
     mileage, march, engineCapacity, direction, fuel, endOfBoard, value, valueFipe, status,
     state, financing, city, uf, cityCompany, ufCompany, bodywork,
-    horses, video, platformVideo, images, featuredImage, emphasis, licensingInfos, availability, eletricCar, gnv  }: IRequest): Promise<void> {
+    horses, video, platformVideo, images, featuredImage, emphasis, licensingInfos, availability, eletricCar, gnv, phone  }: IRequest): Promise<void> {
 
 
       await this.autosRepository.update({
@@ -67,7 +68,7 @@ class UpdateAutosUseCase {
         plate, chassi, brand, model, version, segment, subsegment, doors, color, year, yearModel,
         mileage, march, engineCapacity, direction, fuel, endOfBoard, value, valueFipe, status,
         state, financing, city, uf, cityCompany, ufCompany, bodywork,
-        horses, video, platformVideo, images, featuredImage, emphasis, licensingInfos, availability, eletricCar, gnv 
+        horses, video, platformVideo, images, featuredImage, emphasis, licensingInfos, availability, eletricCar, gnv, phone 
       });
 
   }

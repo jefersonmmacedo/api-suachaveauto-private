@@ -35,14 +35,14 @@ class CompanyRepository implements ICompanyRepository {
     } 
   }
 
-  async create({type,verified,status, typeDocument, cpf_Cnpj,nameSlug, socialReason, fantasyName, creci, email, phone, whatsapp, password, responsibleName,
+  async create({type,verified,status, typeDocument, cpf_Cnpj,nameSlug, socialReason, fantasyName, creci, email, phone, whatsapp, textWhatsapp, whatsapp2, textWhatsapp2, whatsapp3, textWhatsapp3, whatsapp4, textWhatsapp4,  password, responsibleName,
     emailResponsible, whatsappResponsible, logo, cep, road, number, district, city, uf,complement, reference,viewAddress, website, facebook,
     instagram, linkedin, youtube, aceptTerms, idComercialTeam, }: ICompanyDTO) {
     const company: Company = new Company();
     const idMini = uuidv4()
     const id = idMini.substring(0,8)
       Object.assign(company, {
-        id, _id: id, type,verified, status, typeDocument, cpf_Cnpj,nameSlug, socialReason, fantasyName, creci, email, phone, whatsapp, password, responsibleName,
+        id, _id: id, type,verified, status, typeDocument, cpf_Cnpj,nameSlug, socialReason, fantasyName, creci, email, phone, whatsapp, textWhatsapp, whatsapp2, textWhatsapp2, whatsapp3, textWhatsapp3, whatsapp4, textWhatsapp4,  password, responsibleName,
         emailResponsible, whatsappResponsible, logo, cep, road, number, district, city, uf,complement, reference,viewAddress, website, facebook,
         instagram, linkedin, youtube, aceptTerms, idComercialTeam, created_at: new Date(),
       });
@@ -70,7 +70,7 @@ class CompanyRepository implements ICompanyRepository {
 
   list(){ }
 
-  update({id, type, verified, status, typeDocument, cpf_Cnpj,nameSlug, socialReason, fantasyName, creci, email, phone, whatsapp, password, responsibleName,
+  update({id, type, verified, status, typeDocument, cpf_Cnpj,nameSlug, socialReason, fantasyName, creci, email, phone, whatsapp, textWhatsapp, whatsapp2, textWhatsapp2, whatsapp3, textWhatsapp3, whatsapp4, textWhatsapp4,  password, responsibleName,
     emailResponsible, whatsappResponsible, logo, cep, road, number, district, city, uf,complement, reference, website, facebook,
     instagram, linkedin, youtube, aceptTerms, idComercialTeam}):void {}
 

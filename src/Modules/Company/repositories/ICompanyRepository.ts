@@ -13,6 +13,13 @@ interface ICompanyDTO {
   email: string;
   phone: string;
   whatsapp: string;
+  textWhatsapp: string;
+  whatsapp2: string;
+  textWhatsapp2: string;
+  whatsapp3: string;
+  textWhatsapp3: string;
+  whatsapp4: string;
+  textWhatsapp4: string;
   password: string;
   responsibleName: string;
   emailResponsible: string;
@@ -39,14 +46,14 @@ interface ICompanyDTO {
   
  
 interface ICompanyRepository {
-  create({ type,verified, status, typeDocument, cpf_Cnpj, nameSlug, socialReason, fantasyName, creci, email, phone, whatsapp, password, responsibleName,
+  create({ type,verified, status, typeDocument, cpf_Cnpj, nameSlug, socialReason, fantasyName, creci, email, phone, whatsapp, textWhatsapp, whatsapp2, textWhatsapp2, whatsapp3, textWhatsapp3, whatsapp4, textWhatsapp4,  password, responsibleName,
     emailResponsible, whatsappResponsible, logo, cep, road, number, district, city, uf,complement, reference, viewAddress, website, facebook,
     instagram, linkedin, youtube, aceptTerms, idComercialTeam, }: ICompanyDTO): Promise<void>;
   findByEmail(email: string): Promise<void> ;
   findById(id: string): Promise<void>;
   session(email: string, id: string, password: string);
   list();
-  update({id, type,verified, status, typeDocument, cpf_Cnpj, nameSlug, socialReason, fantasyName, creci, email, phone, whatsapp, password, responsibleName,
+  update({id, type,verified, status, typeDocument, cpf_Cnpj, nameSlug, socialReason, fantasyName, creci, email, phone, whatsapp, textWhatsapp, whatsapp2, textWhatsapp2, whatsapp3, textWhatsapp3, whatsapp4, textWhatsapp4,  password, responsibleName,
     emailResponsible, whatsappResponsible, logo, cep, road, number, district, city, uf,complement, reference, viewAddress, website, facebook,
     instagram, linkedin, youtube, aceptTerms, idComercialTeam,}: ICompanyDTO): void;
   delete({id});

@@ -11,6 +11,13 @@ class Company {
   email: string;
   phone: string;
   whatsapp: string;
+  textWhatsapp: string;
+  whatsapp2: string;
+  textWhatsapp2: string;
+  whatsapp3: string;
+  textWhatsapp3: string;
+  whatsapp4: string;
+  textWhatsapp4: string;
   password: string;
   responsibleName: string;
   emailResponsible: string;
