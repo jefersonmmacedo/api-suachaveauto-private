@@ -7,6 +7,7 @@ import { listAutosTypeController } from "../../Modules/Autos/useCases/listAutosT
 import { listAutosAutoController } from "../../Modules/Autos/useCases/listAutosAuto";
 import { listAutosAvailabilityController } from "../../Modules/Autos/useCases/listAutosAvailability";
 import { updateAutosController } from "../../Modules/Autos/useCases/updateAutos";
+import { updateAutosAvailabilityController } from "../../Modules/Autos/useCases/updateAutosAvailability";
 
 const AutosRoutes = Router();
 
@@ -18,6 +19,9 @@ AutosRoutes.get("/", (req, res) => {
 });
 AutosRoutes.patch("/:id", (req, res) => {
   return updateAutosController.handle(req, res);
+});
+AutosRoutes.patch("/availability/:id", (req, res) => {
+  return updateAutosAvailabilityController.handle(req, res);
 });
 AutosRoutes.get("/allcars/:availability", (req, res) => {
   return listAutosAvailabilityController.handle(req, res);
