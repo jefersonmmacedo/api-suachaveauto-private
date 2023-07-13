@@ -8,6 +8,9 @@ import { listAutosAutoController } from "../../Modules/Autos/useCases/listAutosA
 import { listAutosAvailabilityController } from "../../Modules/Autos/useCases/listAutosAvailability";
 import { updateAutosController } from "../../Modules/Autos/useCases/updateAutos";
 import { updateAutosAvailabilityController } from "../../Modules/Autos/useCases/updateAutosAvailability";
+import { listAutosAvailabilityBrandController } from "../../Modules/Autos/useCases/listAutosAvailabilityBrand";
+import { listAutosAllController } from "../../Modules/Autos/useCases/listAutosAll";
+import { listAutosAvailabilityBrandModelController } from "../../Modules/Autos/useCases/listAutosAvailabilityBrandModel";
 
 const AutosRoutes = Router();
 
@@ -25,6 +28,15 @@ AutosRoutes.patch("/availability/:id", (req, res) => {
 });
 AutosRoutes.get("/allcars/:availability", (req, res) => {
   return listAutosAvailabilityController.handle(req, res);
+});
+AutosRoutes.get("/fullData", (req, res) => {
+  return listAutosAllController.handle(req, res);
+});
+AutosRoutes.get("/allBrandcars/:availability", (req, res) => {
+  return listAutosAvailabilityBrandController.handle(req, res);
+});
+AutosRoutes.get("/allBrandModelcars/:availability", (req, res) => {
+  return listAutosAvailabilityBrandModelController.handle(req, res);
 });
 AutosRoutes.get("/typecar/:type", (req, res) => {
   return listAutosTypeController.handle(req, res);
