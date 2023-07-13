@@ -13,13 +13,16 @@ class ListAutosAvailabilityBrandModelController {
     const page = req.query.page;
     const limit = req.query.limit;
     const emphasis = req.query.emphasis;
-    const model = req.query.model as string;
+    const model = req.query.model;
     const brand = req.query.brand;
     const Music = "Musica"
     const boolean = emphasis === "false" ? false : true;
 
-   await collections.autos.find({  
-    $text: { $search: "sandero" } 
+   await collections.autos.find({
+    availability: availability,
+    brand: brand,
+    emphasis: boolean,
+    model:{'$regex' : model}
   }).sort( { created_at: -1 } )
    .skip(Number(page) > 0 ? (( Number(page) - 1) * Number(limit)) : 0).limit( Number(limit) ).toArray(function(err, result){
       if(err) {
@@ -28,7 +31,6 @@ class ListAutosAvailabilityBrandModelController {
         console.log(result)
         res.status(200).json(result)
       }
-
       console.log(result)
       return result;
      })
